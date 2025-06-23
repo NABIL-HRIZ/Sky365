@@ -1,0 +1,62 @@
+.featured-section {
+  background-color: #f8f9fa;
+}
+
+.hotel-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.hotel-image {
+  transition: transform 0.3s ease;
+}
+
+.hotel-card:hover .hotel-image {
+  transform: scale(1.05);
+}
+
+.hotel-details-modal .modal-dialog {
+  max-width: 1200px;
+}
+
+.hotel-details-modal .modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.facility-item {
+  min-width: 150px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.facility-item:hover {
+  background-color: #e3f2fd !important;
+  border-color: #17a2b8;
+}
+
+.carousel-item img {
+  border-radius: 8px;
+}
+
+.price-section {
+  border: 2px solid #17a2b8;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+}
+
+@media (max-width: 768px) {
+  .hotel-details-modal .modal-dialog {
+    margin: 10px;
+  }
+
+  .facility-item {
+    min-width: 120px;
+  }
+}

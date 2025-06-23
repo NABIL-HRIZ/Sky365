@@ -1,0 +1,313 @@
+.exclusive-offers-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+}
+
+.exclusive-offers-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #17a2b8 50%, transparent 100%);
+}
+
+.section-header {
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  border-radius: 2px;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.see-more-btn {
+  color: #17a2b8 !important;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.see-more-btn:hover {
+  color: #138496 !important;
+  transform: translateX(5px);
+}
+
+.icon-wrapper {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(23, 162, 184, 0.3);
+}
+
+.see-more-btn:hover .icon-wrapper {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(23, 162, 184, 0.4);
+}
+
+.transition-icon {
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.rotating {
+  animation: rotate 0.3s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.offers-container {
+  transition: all 0.3s ease;
+}
+
+.offers-container.animating {
+  opacity: 0.7;
+  transform: translateY(10px);
+}
+
+.offer-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-image-wrapper {
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+
+.offer-image {
+  transition: transform 0.3s ease;
+  border-radius: 15px 15px 0 0;
+}
+
+.offer-card:hover .offer-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(23, 162, 184, 0.1) 0%, rgba(19, 132, 150, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.offer-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.discount-badge {
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.discount-percent {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.discount-text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.expiry-badge {
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.offer-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.offer-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.savings-text {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.savings-text::before {
+  content: "💰";
+  margin-right: 5px;
+}
+
+.claim-btn {
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  padding: 8px 16px !important;
+}
+
+.claim-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(23, 162, 184, 0.4);
+}
+
+.card-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-top: 30px solid #17a2b8;
+  opacity: 0.1;
+}
+
+.additional-offers-indicator {
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.offer-card-col {
+  animation: fadeInUp 0.5s ease;
+  animation-fill-mode: both;
+}
+
+.offer-card-col:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.offer-card-col:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.offer-card-col:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.offer-card-col:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.offer-card-col:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.offer-card-col:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .see-more-btn {
+    justify-content: center !important;
+    margin-top: 20px;
+  }
+
+  .offer-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .discount-badge {
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+  }
+
+  .expiry-badge {
+    bottom: 10px;
+    right: 10px;
+    font-size: 11px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .exclusive-offers-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  }
+
+  .offer-card {
+    background: #2d2d2d;
+    color: white;
+  }
+
+  .offer-title {
+    color: white;
+  }
+}

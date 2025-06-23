@@ -1,0 +1,64 @@
+/* Container background */
+section.py-5.bg-light {
+  background: #f9fafb;
+}
+
+/* Card style */
+.card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  cursor: default;
+}
+
+/* Hover effect: lift card & stronger shadow */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* User image */
+.card img.rounded-circle {
+  border: 3px solid #22b9d0; /* golden border */
+  box-shadow: 0 2px 8px rgb(255 215 0 / 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* Slight scale on image hover */
+.card:hover img.rounded-circle {
+  transform: scale(1.05);
+}
+
+/* Name style */
+.card h6.fw-bold {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #212529;
+}
+
+/* Address style */
+.card small.text-muted {
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* Review text */
+.card p.fst-italic {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .card {
+    border-radius: 0.75rem;
+    padding: 1rem !important;
+  }
+
+  .card p.fst-italic {
+    font-size: 0.9rem;
+  }
+}
